@@ -1,0 +1,10 @@
+{
+  "sample_id": "demo_001",
+  "commit_id": "abc123",
+  "project": "demo",
+  "func_before": "int read_item(int index) { return items[index]; }",
+  "func_after": "int read_item(int index) { if (index < 0 || index >= size) return -1; return items[index]; }",
+  "commit_msg": "validate index before reading",
+  "bug_description": "an invalid index can cause an out-of-bounds read"
+}
+

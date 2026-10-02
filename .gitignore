@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+
+# Local environments and secrets
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Private datasets and generated experiment outputs
+/input/*
+!/input/README.md
+/output*/
+/final*/
+/all_result/
+/artifacts/
+/cds_statistics/
+/.codex_tmp/
+
+# Temporary and log files
+*.tmp
+*.log
+pipeline_errors*.jsonl

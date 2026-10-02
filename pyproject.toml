@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "context-audit"
+version = "0.1.0"
+description = "Three-stage LLM pipeline for auditing contextual dependence in vulnerability analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["openai>=1.0", "pandas>=2.0"]
+
+[project.optional-dependencies]
+parquet = ["pyarrow>=14.0"]
+
+[project.scripts]
+context-audit = "three_stage_pipeline.cli:main"
+context-audit-rerun = "three_stage_pipeline.rerun:main"
+three-stage-pipeline = "three_stage_pipeline.cli:main"
+three-stage-rerun-errors = "three_stage_pipeline.rerun:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
